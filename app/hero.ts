@@ -1,0 +1,92 @@
+import { heroui } from "@heroui/react";
+export default heroui({
+  addCommonColors: true,
+  defaultTheme: "light",
+  layout: {
+    radius: {
+      small: "4px", // rounded-small
+      medium: "8px", // rounded-medium
+      large: "12px", // rounded-large
+    },
+  },
+  themes: {
+    light: {
+      colors: {
+        background: "#ffffff",
+        foreground: "#5B5E65",
+        primary: {
+          DEFAULT: "#008433",
+          100: "#C1EDD2",
+          200: "#8CDDAB",
+          300: "#43C876",
+          400: "#00A741",
+          500: "#008433",
+          600: "#006E2B",
+          700: "#005320",
+          800: "#00431A",
+          900: "#003414",
+        },
+        secondary: {
+          DEFAULT: "#ff7f50",
+          100: "#C9FBC9",
+          200: "#94F79D",
+          300: "#5DE977",
+          400: "#34D362",
+          500: "#00B747",
+          600: "#009D4C",
+          700: "#00834D",
+          800: "#006A48",
+          900: "#005744",
+        },
+        success: {
+          DEFAULT: "#20B552",
+          100: "#D4FBD1",
+          200: "#A6F7A9",
+          300: "#75E885",
+          400: "#50D26F",
+          500: "#20B552",
+          600: "#179B50",
+          700: "#10824C",
+          800: "#0A6846",
+          900: "#065641",
+        },
+        warning: {
+          DEFAULT: "#E6BB00",
+          100: "#FFF1AD",
+          200: "#FFE77D",
+          300: "#FFDE4B",
+          400: "#FFD41A",
+          500: "#E6BB00",
+          600: "#B39100",
+          700: "#795D07",
+          800: "#533D07",
+          900: "#392A04",
+        },
+        danger: {
+          DEFAULT: "#DC262A",
+          100: "#F9DCDC",
+          200: "#F4BFBF",
+          300: "#EE9A9A",
+          400: "#E6696A",
+          500: "#DC262A",
+          600: "#BF0811",
+          700: "#91070D",
+          800: "#77060C",
+          900: "#5E050A",
+        },
+        default: {
+          DEFAULT: "#6E727A",
+          100: "#E0E2E7",
+          200: "#C8CCD4",
+          300: "#ABB1BD",
+          400: "#8C919B",
+          500: "#6E727A",
+          600: "#5B5E65",
+          700: "#44474B",
+          800: "#37393D",
+          900: "#2B2C2F",
+        },
+      },
+    },
+  },
+});
