@@ -7,7 +7,10 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
 const Container = ({ children, className, ...props }: Props) => {
   return (
     <div
-      className={cn(className, "container mx-auto p-5 2xl:max-w-7xl 2xl:p-0")}
+      className={cn(
+        className,
+        "container mx-auto p-5 lg:p-8 2xl:max-w-7xl 2xl:p-0",
+      )}
       {...props}
     >
       {children}

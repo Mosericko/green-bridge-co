@@ -40,7 +40,7 @@ export default function HeroSection() {
             </div>
           </div>
 
-          <div className="flex h-full flex-col justify-center gap-5 lg:gap-8">
+          <div className="mt-10 flex h-full flex-col gap-5 lg:mt-14 xl:mt-0 xl:justify-center xl:gap-8">
             <Reveal>
               <div className="bg-primary/20 w-fit border border-[#D1F57B]/10 px-2 py-1">
                 <p className="text-sm font-medium text-[#D1F57B] xl:text-base">
