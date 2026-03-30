@@ -5,6 +5,7 @@ import { StaggerContainer, StaggerItem } from "@/components/motion/stagger";
 import { TextReveal } from "@/components/motion/text-reveal";
 import { RemixImage } from "@/components/remix-image";
 import SocialLinks from "@/components/socials";
+import SideDrawer from "@/layouts/drawer";
 import { Button } from "@heroui/react";
 import { Link, NavLink } from "react-router";
 
@@ -18,7 +19,7 @@ export default function HeroSection() {
   return (
     <main className="min-h-screen xl:h-screen">
       <div className="grid h-full grid-cols-1 overflow-hidden bg-[#133026] lg:grid-cols-5">
-        <div className="col-span-1 flex h-full min-h-screen flex-col bg-[#15372C] p-5 lg:col-span-2 lg:p-8 xl:h-screen">
+        <div className="relative col-span-1 flex h-full min-h-screen flex-col bg-[#15372C] p-5 lg:col-span-2 lg:p-8 xl:h-screen">
           <div className="flex w-full items-center justify-between max-md:mb-10">
             <Reveal>
               <Logo variant="light" className="h-7" />
@@ -30,12 +31,7 @@ export default function HeroSection() {
             </div>
             <div className="block lg:hidden">
               <Reveal delay={0.2}>
-                <Button isIconOnly variant="light" color="primary">
-                  <Icon
-                    name="icon-[hugeicons--menu-two-line]"
-                    className={"text-primary size-8 cursor-pointer"}
-                  />
-                </Button>
+                <SideDrawer navigation={headerItems} />
               </Reveal>
             </div>
           </div>
@@ -92,6 +88,14 @@ export default function HeroSection() {
               </Button>
             </Reveal>
           </div>
+
+          {/* show globe */}
+
+          <div className="hidden items-center justify-center md:flex lg:hidden">
+            <Reveal delay={0.8}>
+              <RemixImage src="/geo-globe.svg" layout="fullWidth" />
+            </Reveal>
+          </div>
         </div>
         {/* right side */}
         <div className="hidden px-10 py-8 lg:col-span-3 lg:block">
@@ -106,7 +110,7 @@ export default function HeroSection() {
                     <NavLink
                       key={index}
                       to={item.path}
-                      className="text-base font-medium"
+                      className="hover:text-primary-300 flex items-center gap-1 text-base font-medium text-white transition-all duration-150"
                     >
                       {item.name}
                     </NavLink>
