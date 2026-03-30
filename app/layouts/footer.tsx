@@ -11,7 +11,7 @@ export default function Footer() {
   return (
     <footer className="bg-[#133026] pt-10 md:pt-20">
       <Container>
-        <div className="grid min-h-96 grid-cols-1 gap-5 md:grid-cols-2">
+        <div className="grid min-h-96 grid-cols-1 gap-5 md:grid-cols-2 md:gap-10">
           <div className="col-span-1 flex flex-col justify-between">
             <div className="flex flex-col gap-8">
               <Logo variant="light" />
@@ -53,14 +53,14 @@ export default function Footer() {
             </div>
           </div>
           <div className="col-span-1 flex flex-col items-end justify-between">
-            <div className="hidden w-full max-w-lg flex-col items-start lg:flex">
+            <div className="hidden w-full max-w-lg flex-col items-start md:flex">
               <h4 className="text-xl text-[#D1F57B]">Quick Links</h4>
               <div className="mt-2 flex flex-col gap-3">
                 {headerItems.map((item, index) => (
                   <Link
                     key={index + item.name}
                     to={item.path}
-                    className="flex items-center gap-1 text-white"
+                    className="hover:text-primary-300 flex items-center gap-1 text-white transition-all duration-150"
                   >
                     <Icon
                       name="icon-[si--arrow-right-fill]"
