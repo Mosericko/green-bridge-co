@@ -14,21 +14,48 @@
 }
 @layer base {
   h1 {
-    @apply font-heading text-6xl font-extrabold;
+    @apply font-heading text-5xl font-extrabold;
   }
   h2 {
-    @apply font-heading text-5xl;
+    @apply font-heading text-4xl font-semibold;
   }
   h3 {
-    @apply font-heading text-4xl;
+    @apply font-heading text-3xl font-semibold;
   }
   h4 {
-    @apply font-heading text-3xl;
+    @apply font-heading text-2xl font-semibold;
   }
   h5 {
-    @apply font-heading text-2xl;
+    @apply font-heading text-xl font-semibold;
   }
   h6 {
-    @apply font-heading text-xl;
+    @apply font-heading text-lg font-semibold;
   }
+}
+
+@utility touch-hitbox {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    min-height: 44px;
+    min-width: 44px;
+    z-index: 9999;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* this fixes the pixilation of high res images in chromium based browsers when object fit is cover */
+.overflow-clip-margin {
+  overflow-clip-margin: unset;
 }
