@@ -27,7 +27,7 @@ export default heroui({
           900: "#003414",
         },
         secondary: {
-          DEFAULT: "#ff7f50",
+          DEFAULT: "#00B747",
           100: "#C9FBC9",
           200: "#94F79D",
           300: "#5DE977",
