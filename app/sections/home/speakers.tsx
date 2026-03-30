@@ -54,7 +54,7 @@ const otherSpeakers = [
 
 export default function Speakers() {
   return (
-    <section className="bg-[#E1E7E0]/25 py-32">
+    <section className="bg-[#E1E7E0]/25 py-16 xl:py-32">
       <Container className="flex flex-col gap-16">
         <SectionHeading
           subTitlte="Who will be speaking"
@@ -66,7 +66,7 @@ export default function Speakers() {
             <h5 className="text-primary whitespace-nowrap">Key Speakers</h5>
             <div className="bg-default-200 h-px w-full" />
           </div>
-          <div className="grid grid-cols-1 gap-20 xl:grid-cols-3">
+          <div className="grid grid-cols-1 gap-10 lg:grid-cols-3 xl:gap-20">
             {speakers.map((speaker, index) => (
               <KeySpeaker
                 key={index + speaker.name}
@@ -83,7 +83,7 @@ export default function Speakers() {
             <h5 className="text-primary whitespace-nowrap">Other Speakers</h5>
             <div className="bg-default-200 h-px w-full" />
           </div>
-          <div className="grid grid-cols-1 gap-10 xl:grid-cols-5">
+          <div className="grid grid-cols-2 gap-10 lg:grid-cols-3 xl:grid-cols-5">
             {otherSpeakers.map((speaker, index) => (
               <OtherSpeaker
                 key={index + speaker.name}

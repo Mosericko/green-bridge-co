@@ -9,9 +9,9 @@ import { Link } from "react-router";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#133026] pt-20">
+    <footer className="bg-[#133026] pt-10 md:pt-20">
       <Container>
-        <div className="grid min-h-96 grid-cols-1 md:grid-cols-2">
+        <div className="grid min-h-96 grid-cols-1 gap-5 md:grid-cols-2">
           <div className="col-span-1 flex flex-col justify-between">
             <div className="flex flex-col gap-8">
               <Logo variant="light" />
@@ -28,7 +28,7 @@ export default function Footer() {
               <SocialLinks />
             </div>
 
-            <div className="flex flex-col gap-2">
+            <div className="mt-10 flex flex-col gap-2 lg:mt-0">
               <div className="flex items-center gap-4">
                 <Input
                   placeholder="Email"
@@ -53,7 +53,7 @@ export default function Footer() {
             </div>
           </div>
           <div className="col-span-1 flex flex-col items-end justify-between">
-            <div className="flex w-full max-w-lg flex-col items-start">
+            <div className="hidden w-full max-w-lg flex-col items-start lg:flex">
               <h4 className="text-xl text-[#D1F57B]">Quick Links</h4>
               <div className="mt-2 flex flex-col gap-3">
                 {headerItems.map((item, index) => (
@@ -72,7 +72,7 @@ export default function Footer() {
                 ))}
               </div>
             </div>
-            <div className="">
+            <div className="mt-20 lg:mt-0">
               <p className="text-default-200 max-w-lg text-sm">
                 In the spirit of reconciliation we acknowledge the Traditional
                 Custodians of country throughout Australia and their connections

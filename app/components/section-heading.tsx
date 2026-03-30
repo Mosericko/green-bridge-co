@@ -15,7 +15,9 @@ export default function SectionHeading({
     <div className="flex flex-col gap-6">
       <p className="text-primary text-sm font-bold uppercase">{subTitlte}</p>
 
-      <h2 className="max-w-5xl text-4xl font-bold text-black">{title}</h2>
+      <h2 className="max-w-5xl text-2xl font-bold text-black xl:text-4xl">
+        {title}
+      </h2>
 
       <p className="text-default max-w-lg text-base">{description}</p>
     </div>

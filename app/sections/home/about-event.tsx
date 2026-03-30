@@ -35,14 +35,14 @@ const highlights = [
 
 export default function AboutEvent() {
   return (
-    <section className="py-32">
+    <section className="py-16 xl:py-32">
       <Container>
         <SectionHeading
           subTitlte="About the Event"
           title="Join more than 1,500 industry professionals, business leaders and government stakeholders at Australia's  Sustainability Summit 2026 "
         />
 
-        <div className="grid grid-cols-2 gap-10">
+        <div className="grid gap-10 xl:grid-cols-2">
           <div className="col-span-1 flex flex-col gap-8">
             <p className="">
               This must-attend Summit brings together the most influential
@@ -70,7 +70,6 @@ export default function AboutEvent() {
             <Button
               className="w-fit font-semibold"
               color="primary"
-              size="lg"
               endContent={
                 <Icon
                   name="icon-[eva--chevron-right-outline]"
@@ -81,7 +80,7 @@ export default function AboutEvent() {
               Get your ticket now
             </Button>
           </div>
-          <div className="col-span-1">
+          <div className="col-span-1 hidden xl:block">
             <SustainabiltyGrid />
           </div>
         </div>

@@ -11,7 +11,7 @@ export default function Logo({ variant, className, ...props }: Props) {
     <Link
       className={cn(
         variant === "light" ? "text-white" : "text-primary-500",
-        "font-heading cursor-pointer text-2xl font-bold tracking-tight select-none 2xl:text-3xl",
+        "font-heading cursor-pointer text-xl font-bold tracking-tight select-none md:text-2xl 2xl:text-3xl",
       )}
       to="/"
     >

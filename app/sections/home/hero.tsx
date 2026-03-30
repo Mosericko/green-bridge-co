@@ -16,36 +16,55 @@ export const headerItems = [
 
 export default function HeroSection() {
   return (
-    <main className="h-screen">
-      <div className="grid h-full grid-cols-5 overflow-hidden bg-[#133026]">
-        <div className="col-span-2 flex h-full flex-col justify-between bg-[#15372C] px-10 py-8">
-          <div className="flex items-center justify-between">
+    <main className="min-h-screen xl:h-screen">
+      <div className="grid h-full grid-cols-1 overflow-hidden bg-[#133026] lg:grid-cols-5">
+        <div className="col-span-1 flex h-full min-h-screen flex-col bg-[#15372C] p-5 lg:col-span-2 lg:p-8 xl:h-screen">
+          <div className="flex w-full items-center justify-between max-md:mb-10">
             <Reveal>
               <Logo variant="light" className="h-7" />
             </Reveal>
-
-            <Reveal delay={0.2}>
-              <SocialLinks />
-            </Reveal>
+            <div className="hidden lg:block">
+              <Reveal delay={0.2}>
+                <SocialLinks />
+              </Reveal>
+            </div>
+            <div className="block lg:hidden">
+              <Reveal delay={0.2}>
+                <Button isIconOnly variant="light" color="primary">
+                  <Icon
+                    name="icon-[hugeicons--menu-two-line]"
+                    className={"text-primary size-8 cursor-pointer"}
+                  />
+                </Button>
+              </Reveal>
+            </div>
           </div>
 
-          <div className="flex flex-col gap-8">
+          <div className="flex h-full flex-col justify-center gap-5 lg:gap-8">
             <Reveal>
               <div className="bg-primary/20 w-fit border border-[#D1F57B]/10 px-2 py-1">
-                <p className="text-base font-medium text-[#D1F57B]">
+                <p className="text-sm font-medium text-[#D1F57B] xl:text-base">
                   Early bird prices available at $100
                 </p>
               </div>
             </Reveal>
-
-            <TextReveal
-              words={`Practical \nSustainability Summit \nfor Change Makers`}
-              duration={0.9}
-              className="font-heading text-3xl font-extrabold text-white xl:text-4xl 2xl:text-5xl"
-            />
+            <div className="hidden md:block">
+              <TextReveal
+                words={`Practical \nSustainability Summit \nfor Change Makers`}
+                duration={0.9}
+                className="font-heading text-3xl font-extrabold text-white xl:text-4xl 2xl:text-5xl"
+              />
+            </div>
+            <div className="md:hidden">
+              <TextReveal
+                words={`Practical Sustainability Summit for Change Makers`}
+                duration={0.9}
+                className="font-heading text-3xl font-extrabold text-white xl:text-4xl 2xl:text-5xl"
+              />
+            </div>
             <Reveal
               delay={1}
-              className="max-w-xs self-center max-md:text-center md:max-w-xl lg:max-w-xl"
+              className="max-w-xs self-center max-md:text-start md:max-w-xl lg:max-w-xl"
               filter
             >
               <p className="text-default-200 max-w-xl text-lg font-normal max-xl:text-sm">
@@ -73,10 +92,9 @@ export default function HeroSection() {
               </Button>
             </Reveal>
           </div>
-
-          <div className=""></div>
         </div>
-        <div className="relative col-span-3 px-10 py-8">
+        {/* right side */}
+        <div className="hidden px-10 py-8 lg:col-span-3 lg:block">
           <div className="flex items-center justify-between">
             <nav>
               <StaggerContainer

@@ -27,7 +27,7 @@ const events = [
 
 export default function Agenda() {
   return (
-    <section className="flex flex-col gap-10 py-32">
+    <section className="flex flex-col gap-10 py-16 xl:py-32">
       <Container className="flex flex-col gap-8">
         <SectionHeading
           subTitlte="ProgramMe Overview"
@@ -35,7 +35,7 @@ export default function Agenda() {
           description="Here is how the day will unfold. Explore and join the sessions that matter to you. Learn from experts and business professionals"
         />
 
-        <div className="grid grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 gap-y-5 xl:grid-cols-3 xl:gap-10">
           <div className="col-span-1 flex flex-col gap-5">
             <CurrentEvent />
             {events.map((event) => (
@@ -65,7 +65,7 @@ export default function Agenda() {
 function CurrentEvent() {
   return (
     <div>
-      <span className="bg-primary/20 inline-block rounded-sm px-2 py-1 text-xs font-semibold text-green-800">
+      <span className="bg-primary/20 text-primary-800 inline-block rounded-sm px-2 py-1 text-xs font-semibold">
         7:00 am - 8:00 am
       </span>
 
